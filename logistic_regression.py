@@ -5,8 +5,8 @@ class logisticRegression(object):
 
     def __init__(self, num_features):
         self.num_features = num_features
-        self.weights = np.random.randn(num_features, 1)
-        self.bias = np.random.randn(1, 1)
+        self.weights = np.random.randn(num_features, 1) * 0.01
+        self.bias = np.random.randn(1, 1) * 0.01
 
     def feedforward(self, inputs):
         z = np.dot(inputs, self.weights) + self.bias
